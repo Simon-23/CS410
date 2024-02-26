@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The canvas element</h1>
+
+<canvas id="myCanvas" width="500px" height="700px" style="border:1px solid gray">
+Your browser does not support the canvas tag.
+</canvas>
+
+
+<script>
+const c = document.getElementById("myCanvas");
+const ctx = c.getContext("2d");
+//ctx.fillStyle = "#888888"; //8's is gray
+ctx.strokeStyle = "red";
+//ctx.fillRect(20, 20, 75, 50);
+
+//Turn transparency on - default website code
+ctx.globalAlpha = 1;
+//ctx.fillStyle = "blue"; 
+//ctx.fillRect(50, 50, 75, 50); 
+//ctx.fillStyle = "green"; 
+//ctx.fillRect(80, 80, 75, 50);
+
+ctx.beginPath();
+//(x,y)
+ctx.moveTo(115,532);// the bottom left line
+ctx.lineTo(169,607);
+
+ctx.moveTo(125,525); // the bottom left (top) line
+ctx.lineTo(180,600); 
+
+ctx.moveTo(125,525); // connects bottomL top line
+ctx.lineTo(115,532);
+
+ctx.lineTo(169,607); // connects bottomL bot line
+ctx.lineTo(180,600); 
+
+
+
+// Other top right box
+//difference is ~70
+ctx.moveTo(115,532);// the bottom left line
+ctx.lineTo(169,607);
+
+ctx.moveTo(125,525); // the bottom left (top) line
+ctx.lineTo(180,600); 
+
+ctx.moveTo(125,525); // connects bottomL top line
+ctx.lineTo(115,532);
+
+ctx.lineTo(169,607); // connects bottomL bot line
+ctx.lineTo(180,600); 
+
+
+
+
+
+
+ctx.stroke();
+</script>
+
+</body>
+</html>
